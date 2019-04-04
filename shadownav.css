@@ -1,0 +1,81 @@
+
+/* 0.1.0 Move default template navbar static top styles to navbar wrapper */
+.navbar
+{
+  margin-bottom: 0;
+}
+
+.navbar-wrapper
+{
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px)
+{
+  
+  /* 0.1.0 Change stack levels of navbar and contents (dropdown menu) and give navbar shadow */
+  .navbar-wrapper
+  {
+    position: relative;
+    z-index: 1000;
+  }
+
+  .navbar
+  {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    z-index: auto;
+  }
+
+  .dropdown-menu
+  {
+    z-index: -1;
+  }
+}
+
+@media (max-width: 767px)
+{
+	
+  .navbar
+  {
+    z-index: 1000;
+  }
+  
+  /* 0.1.0 Change stack levels of navbar-header and sibling (navbar-collapse) for correct navbar header shadow optics and give both shadows */
+  .navbar-header
+  {
+    position: relative;
+    z-index: 1;
+  }
+
+  .navbar-header, .navbar-collapse
+  {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+  }
+
+	
+  /* Add inset shadow and change stack levels of default template included elements (diver and dropdown header) */
+  .navbar-nav .open .dropdown-menu
+  {
+    border-radius: 0;
+    box-shadow: inset 0 16px 12px -12px rgba(0, 0, 0, .175), inset 0 -16px 12px -12px rgba(0, 0, 0, .175);
+  }
+
+  .dropdown-menu>.divider, .dropdown-header
+  {
+    position: relative;
+    z-index: -1;
+  }
+
+  /* Move default styles from anchors to div wrapped around anchor text for correct dropdown menu inset shadow optics */
+  .navbar-nav .open .dropdown-menu > li > a
+  {
+    padding: 0;
+  }
+
+  .navbar-nav .open .dropdown-menu > li > a > div
+  {
+    padding: 5px 15px 5px 25px;
+    position: relative;
+    z-index: -1;
+  }
+}
