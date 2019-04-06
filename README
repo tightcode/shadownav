@@ -1,0 +1,16 @@
+Shadownav
+1.0.0 Shadownav: Responsive Bootstrap 3.3.7 navbar shadow effects
+
+Getting Started
+Extract files for example
+or
+To use plugin with default bootstrap navbar (https://getbootstrap.com/docs/3.3/examples/navbar/)
+	1. Link to shadownav.css after navbar.css in head
+	2. Wrap nav with shadownav-wrapper
+	3. Wrap anchors' text with divs
+
+Prerequisites
+Everything is included
+
+Built With
+Bootstrap
