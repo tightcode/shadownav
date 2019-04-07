@@ -1,54 +1,60 @@
+/* 1.1.0 Change shadownav-wrapper class name to sn-default-wrapper */
 /* 1.0.0 Move margin-bottom to shadownav-wrapper (to add box-shadow to navbar) */
-.shadownav-wrapper {
+.sn-default-wrapper {
 	margin-bottom: 20px;
 }
-.shadownav-wrapper .navbar {
+.sn-default-wrapper .navbar {
 	margin-bottom: 0;
 }
 @media (min-width: 768px) {
 	/* 1.0.0 Establish stacking context and modify stacking order of shadownnav-wrapper */
-	.shadownav-wrapper {
+	.sn-default-wrapper {
 		position: relative;
 		z-index: 1000;
 	}
 	/* 1.0.0 Add shadow to navbar */
-	.shadownav-wrapper .navbar {
+	.sn-default-wrapper .navbar {
 		box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
 	}
 	/* 1.0.0 Modify stacking order of dropdown-menu */
-	.shadownav-wrapper .dropdown-menu {
+	.sn-default-wrapper .dropdown-menu {
 		z-index: -1;
 	}
+	/* 1.1.0 IE fix */
+	.dropdown-menu > li {
+		list-style-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
+	}		
 }
 @media (max-width: 767px) {
 	/* 1.0.0 Establish stacking context and modify stacking order of navbar-header */
-	.shadownav-wrapper .navbar-header {
+	.sn-default-wrapper .navbar-header {
 		position: relative;
 		z-index: 1;
 	}
 	/* 1.0.0 Add shadow to navbar-header and navbar-collapse */
-	.shadownav-wrapper .navbar-header, .shadownav-wrapper .navbar-collapse {
+	.sn-default-wrapper .navbar-header, .sn-default-wrapper .navbar-collapse {
 		box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
 	}
 	/* 1.0.0 Add inset shadow to dropdown-menu and remove border-radius */
-	.shadownav-wrapper .navbar-nav .open .dropdown-menu {
+	.sn-default-wrapper .navbar-nav .open .dropdown-menu {
 		border-radius: 0;
 		box-shadow: inset 0 16px 12px -12px rgba(0, 0, 0, .175), inset 0 -16px 12px -12px rgba(0, 0, 0, .175);
 	}
 	/* 1.0.0 Modify stacking order of divider and dropdown-header */
-	.shadownav-wrapper .dropdown-menu>.divider, .shadownav-wrapper .dropdown-header {
+	.sn-default-wrapper .dropdown-menu>.divider, .sn-default-wrapper .dropdown-header {
 		position: relative;
 		z-index: -1;
 	}
+	/* 1.1.0 Isolated dropdown z-index value to descendent of sn-default-wrapper class (other navbars have established navbar-contexts) */
 	/* 1.0.0 Establish stacking context for dropdown so z-indexes of descendants are not compared to the z-indexes of elements outside this element */
-	.dropdown {
+	.sn-default-wrapper .dropdown {
 		z-index: 0;
 	}
 	/* 1.0.0 Move default styles from anchors to divs wrapped around anchors' text for correct dropdown menu inset shadow optics and link functionality */
-	.shadownav-wrapper .navbar-nav .open .dropdown-menu>li>a {
+	.sn-default-wrapper .navbar-nav .open .dropdown-menu>li>a {
 		padding: 0;
 	}
-	.shadownav-wrapper .navbar-nav .open .dropdown-menu>li>a>div {
+	.sn-default-wrapper .navbar-nav .open .dropdown-menu>li>a>div {
 		padding: 5px 15px 5px 25px;
 		position: relative;
 		z-index: -1;
