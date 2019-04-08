@@ -60,3 +60,97 @@
 		z-index: -1;
 	}
 }
+
+/* 1.2.0 Navbar static top styles */
+
+.sn-static-wrapper .navbar-static-top {
+	margin-bottom: 0;
+}
+.sn-static-wrapper {
+	margin-bottom: 19px;
+}
+@media (min-width: 768px) {
+	.sn-static-wrapper {
+		position: relative;
+		z-index: 1000;
+	}
+	.sn-static-wrapper .navbar-static-top {
+		box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+		z-index: auto;
+	}
+	.sn-static-wrapper .dropdown-menu {
+		z-index: -1;
+	}
+}
+@media (max-width: 767px) {
+	.sn-static-wrapper .navbar-header {
+		position: relative;
+		z-index: 1;
+	}
+	.sn-static-wrapper .navbar-header, .sn-static-wrapper .navbar-collapse {
+		box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+	}
+	.sn-static-wrapper .navbar-nav .open .dropdown-menu {
+		border-radius: 0;
+		box-shadow: inset 0 16px 12px -12px rgba(0, 0, 0, .175), inset 0 -16px 12px -12px rgba(0, 0, 0, .175);
+	}
+	.sn-static-wrapper .dropdown-menu>.divider, .sn-static-wrapper .dropdown-header {
+		position: relative;
+		z-index: -1;
+	}
+	.sn-static-wrapper .navbar-nav .open .dropdown-menu>li>a {
+		padding: 0;
+	}
+	.sn-static-wrapper .navbar-nav .open .dropdown-menu>li>a>div {
+		padding: 5px 15px 5px 25px;
+		position: relative;
+		z-index: -1;
+	}
+}
+/* 1.2.0 Navbar fixed top styles */
+
+@media (min-width: 768px) {
+	.sn-fixed-wrapper {
+		top: 0;
+		position: fixed;
+		z-index: 1030;
+		right: 0;
+		left: 0;
+	}
+	.sn-fixed-wrapper .navbar-fixed-top {
+		right: auto;
+		left: auto;
+		top: auto;
+		position: relative;
+		box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+		z-index: auto;
+	}
+	.sn-fixed-wrapper .dropdown-menu {
+		z-index: -1;
+	}
+}
+@media (max-width: 767px) {
+	.sn-fixed-wrapper .navbar-header {
+		position: relative;
+		z-index: 1;
+	}
+	.sn-fixed-wrapper .navbar-header, .sn-fixed-wrapper .navbar-collapse {
+		box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+	}
+	.sn-fixed-wrapper .navbar-nav .open .dropdown-menu {
+		border-radius: 0;
+		box-shadow: inset 0 16px 12px -12px rgba(0, 0, 0, .175), inset 0 -16px 12px -12px rgba(0, 0, 0, .175);
+	}
+	.sn-fixed-wrapper .dropdown-menu>.divider, .sn-fixed-wrapper .dropdown-header {
+		position: relative;
+		z-index: -1;
+	}
+	.sn-fixed-wrapper .navbar-nav .open .dropdown-menu>li>a {
+		padding: 0;
+	}
+	.sn-fixed-wrapper .navbar-nav .open .dropdown-menu>li>a>div {
+		padding: 5px 15px 5px 25px;
+		position: relative;
+		z-index: -1;
+	}
+}

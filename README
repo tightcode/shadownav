@@ -4,10 +4,11 @@ What the project is for
 	Responsive Bootstrap 3.3.7 navbar shadow effects
 	
 How to configure and install it
-	1. Link to shadownav.css after navbar.css in head
-	2. Wrap nav with shadownav-wrapper
-	3. Wrap dropdown-menu anchors' text with divs
-	
+	Note: Works with default navbar, navbar static top and navbar fixed top styles
+	1. Link to shadownav.css after all the bootstrap css files in head
+	2. Wrap nav with a div containing the appropriate shadownav wrapper class 
+	3. Wrap dropdown-menu anchors' text with divs (for correct dropdown menu inset shadow optics and link functionality)
+
 An example of how to use it or get it running
 	Extract files for example/examples
 	
@@ -18,10 +19,13 @@ How to contribute to it
 	Gitter.im/shadownav
 	
 Version history
+	1.2.0
+		-Updated README
+		-Added navbar static top and navbar fixed top styles
 	1.1.0
 		-Updated README
-		-Change shadownav-wrapper class name to sn-default-wrapper in index.html and shadownav.css
-		-IE fix
-		-Isolated dropdown z-index value to descendent of sn-default-wrapper class (other navbars have established navbar-contexts)
+		-Change shadownav-wrapper class name to sn-default-wrapper in markup and css
+		-IE list-style fix
+		-Isolated dropdown z-index property to descendent of sn-default-wrapper only (other navbars have established navbar-contexts)
 	1.0.0
 		-Shadownav initial release
