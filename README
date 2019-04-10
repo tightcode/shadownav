@@ -1,12 +1,12 @@
 Shadownav
 
 What the project is for
-	Responsive Bootstrap 3.3.7 navbar shadow effects
+	-Responsive Bootstrap 3.3.7 navbar shadow effects
+	-Works with default navbar, navbar static top and navbar fixed top styles
 	
 How to configure and install it
-	Note: Works with default navbar, navbar static top and navbar fixed top styles
-	1. Link to shadownav.css after all the bootstrap css files in head
-	2. Wrap nav with a div containing the appropriate shadownav wrapper class 
+	1. Add link to shadownav.css after bootstrap CSS files
+	2. Wrap nav element with a div containing the appropriate shadownav wrapper class
 	3. Wrap dropdown-menu anchors' text with divs (for correct dropdown menu inset shadow optics and link functionality)
 
 An example of how to use it or get it running
@@ -19,6 +19,9 @@ How to contribute to it
 	Gitter.im/shadownav
 	
 Version history
+	1.2.1
+		-Updated README
+		-Assigned (IE Fix) rule to shadownav
 	1.2.0
 		-Updated README
 		-Added navbar static top and navbar fixed top styles

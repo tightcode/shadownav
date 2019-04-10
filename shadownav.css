@@ -19,11 +19,7 @@
 	/* 1.0.0 Modify stacking order of dropdown-menu */
 	.sn-default-wrapper .dropdown-menu {
 		z-index: -1;
-	}
-	/* 1.1.0 IE fix */
-	.dropdown-menu > li {
-		list-style-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
-	}		
+	}	
 }
 @media (max-width: 767px) {
 	/* 1.0.0 Establish stacking context and modify stacking order of navbar-header */
@@ -45,7 +41,7 @@
 		position: relative;
 		z-index: -1;
 	}
-	/* 1.1.0 Isolated dropdown z-index value to descendent of sn-default-wrapper class (other navbars have established navbar-contexts) */
+	/* 1.1.0 Assigned dropdown z-index value to descendent of sn-default-wrapper class (other navbars have established navbar-contexts) */
 	/* 1.0.0 Establish stacking context for dropdown so z-indexes of descendants are not compared to the z-indexes of elements outside this element */
 	.sn-default-wrapper .dropdown {
 		z-index: 0;
@@ -153,4 +149,13 @@
 		position: relative;
 		z-index: -1;
 	}
+}
+/* 1.2.1 Global styles */
+
+@media (min-width: 768px) {
+	/* 1.2.1 Assigned rule to shadownav */
+	/* 1.1.0 IE fix */
+	.sn-default-wrapper .dropdown-menu > li, .sn-static-wrapper .dropdown-menu > li, .sn-fixed-wrapper .dropdown-menu > li {
+		list-style-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
+	}		
 }
