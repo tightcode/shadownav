@@ -19,6 +19,8 @@ How to contribute to it
 	Gitter.im/shadownav
 	
 Version history
+	1.2.2
+		-Establish a stacking context for sn-default-wrapper
 	1.2.1
 		-Updated README
 		-Assigned (IE Fix) rule to shadownav

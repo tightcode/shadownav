@@ -1,3 +1,5 @@
+/* 1.0.0 Default navbar styles */
+
 /* 1.1.0 Change shadownav-wrapper class name to sn-default-wrapper */
 /* 1.0.0 Move margin-bottom to shadownav-wrapper (to add box-shadow to navbar) */
 .sn-default-wrapper {
@@ -7,10 +9,11 @@
 	margin-bottom: 0;
 }
 @media (min-width: 768px) {
+	/* 1.2.2 Establish a stacking context for sn-default-wrapper */
 	/* 1.0.0 Establish stacking context and modify stacking order of shadownnav-wrapper */
 	.sn-default-wrapper {
 		position: relative;
-		z-index: 1000;
+		z-index: 0;
 	}
 	/* 1.0.0 Add shadow to navbar */
 	.sn-default-wrapper .navbar {
@@ -103,6 +106,7 @@
 		z-index: -1;
 	}
 }
+
 /* 1.2.0 Navbar fixed top styles */
 
 @media (min-width: 768px) {
@@ -150,6 +154,7 @@
 		z-index: -1;
 	}
 }
+
 /* 1.2.1 Global styles */
 
 @media (min-width: 768px) {
