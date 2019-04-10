@@ -7,8 +7,15 @@ What the project is for
 How to configure and install it
 	1. Add link to shadownav.css after bootstrap CSS files
 	2. Wrap nav element with a div containing the appropriate shadownav wrapper class
+		-.sn-default-wrapper for (default) navbar
+		-.sn-static-wrapper for static-top-navbar
+		-.sn-fixed-wrapper for static-fixed-navbar
 	3. Wrap dropdown-menu anchors' text with divs (for correct dropdown menu inset shadow optics and link functionality)
-
+	4. For animations
+		-Add link to jquery ui after jquery (for jquery ui slide effect)
+		-Assign jq-anim or jq-ui-anim (for jquery ui slide effect) class to shadownav wrapper assigned div
+		-Add script after bootstrap JS files
+		
 An example of how to use it or get it running
 	Extract files for example/examples
 	
@@ -19,6 +26,10 @@ How to contribute to it
 	Gitter.im/shadownav
 	
 Version history
+	1.2.3
+		-Updated README
+		-Navbar jquery/jqueryui animation styles
+		-Removed dropdown-menu inner border on animation
 	1.2.2
 		-Establish a stacking context for sn-default-wrapper
 	1.2.1
