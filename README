@@ -23,7 +23,7 @@ The license that the project is offered under
 	The MIT License
 	
 How to contribute to it
-	Gitter.im/shadownav
+	Join the chat at https://gitter.im/shadownav/community
 	
 Version history
 	1.2.3
@@ -45,3 +45,17 @@ Version history
 		-Isolated dropdown z-index property to descendent of sn-default-wrapper only (other navbars have established navbar-contexts)
 	1.0.0
 		-Shadownav initial release
+
+Getting Started
+Extract files for example
+or
+To use plugin with default bootstrap navbar (https://getbootstrap.com/docs/3.3/examples/navbar/)
+	1. Link to shadownav.css after navbar.css in head
+	2. Wrap nav with shadownav-wrapper
+	3. Wrap anchors' text with divs
+
+Prerequisites
+Everything is included
+
+Built With
+Bootstrap
