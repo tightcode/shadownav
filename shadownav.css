@@ -1,218 +1,97 @@
-/* 1.0.0 Default navbar styles */
-
-/* 1.1.0 Change shadownav-wrapper class name to sn-default-wrapper */
-/* 1.0.0 Move margin-bottom to shadownav-wrapper (to add box-shadow to navbar) */
-.sn-default-wrapper {
-	margin-bottom: 20px;
+/*!
+ * Shadownav v1.2.4-alpha ( https://github.com/tightcode/shadownav )
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+.sn-default {
+  margin-bottom: 20px;
 }
-.sn-default-wrapper .navbar {
-	margin-bottom: 0;
+.sn-default .navbar {
+  margin-bottom: 0;
 }
-@media (min-width: 768px) {
-	/* 1.2.2 Establish a stacking context for sn-default-wrapper */
-	/* 1.0.0 Establish stacking context and modify stacking order of shadownnav-wrapper */
-	.sn-default-wrapper {
-		position: relative;
-		z-index: 0;
-	}
-	/* 1.0.0 Add shadow to navbar */
-	.sn-default-wrapper .navbar {
-		box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
-	}
-	/* 1.0.0 Modify stacking order of dropdown-menu */
-	.sn-default-wrapper .dropdown-menu {
-		z-index: -1;
-	}	
+.sn-static {
+  margin-bottom: 19px;
+}
+.sn-static .navbar-static-top {
+  margin-bottom: 0;
+}
+.dropdown-menu {
+  margin-top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.open>div>.dropdown-menu {
+  display: block;
 }
 @media (max-width: 767px) {
-	/* 1.0.0 Establish stacking context and modify stacking order of navbar-header */
-	.sn-default-wrapper .navbar-header {
-		position: relative;
-		z-index: 1;
-	}
-	/* 1.0.0 Add shadow to navbar-header and navbar-collapse */
-	.sn-default-wrapper .navbar-header, .sn-default-wrapper .navbar-collapse {
-		box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
-	}
-	/* 1.0.0 Add inset shadow to dropdown-menu and remove border-radius */
-	.sn-default-wrapper .navbar-nav .open .dropdown-menu {
-		border-radius: 0;
-		box-shadow: inset 0 16px 12px -12px rgba(0, 0, 0, .175), inset 0 -16px 12px -12px rgba(0, 0, 0, .175);
-	}
-	/* 1.0.0 Modify stacking order of divider and dropdown-header */
-	.sn-default-wrapper .dropdown-menu>.divider, .sn-default-wrapper .dropdown-header {
-		position: relative;
-		z-index: -1;
-	}
-	/* 1.1.0 Assigned dropdown z-index value to descendent of sn-default-wrapper class (other navbars have established navbar-contexts) */
-	/* 1.0.0 Establish stacking context for dropdown so z-indexes of descendants are not compared to the z-indexes of elements outside this element */
-	.sn-default-wrapper .dropdown {
-		z-index: 0;
-	}
-	/* 1.0.0 Move default styles from anchors to divs wrapped around anchors' text for correct dropdown menu inset shadow optics and link functionality */
-	.sn-default-wrapper .navbar-nav .open .dropdown-menu>li>a {
-		padding: 0;
-	}
-	.sn-default-wrapper .navbar-nav .open .dropdown-menu>li>a>div {
-		padding: 5px 15px 5px 25px;
-		position: relative;
-		z-index: -1;
-	}
-}
-
-/* 1.2.0 Navbar static top styles */
-
-.sn-static-wrapper .navbar-static-top {
-	margin-bottom: 0;
-}
-.sn-static-wrapper {
-	margin-bottom: 19px;
-}
-@media (min-width: 768px) {
-	.sn-static-wrapper {
-		position: relative;
-		z-index: 1000;
-	}
-	.sn-static-wrapper .navbar-static-top {
-		box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
-		z-index: auto;
-	}
-	.sn-static-wrapper .dropdown-menu {
-		z-index: -1;
-	}
-}
-@media (max-width: 767px) {
-	.sn-static-wrapper .navbar-header {
-		position: relative;
-		z-index: 1;
-	}
-	.sn-static-wrapper .navbar-header, .sn-static-wrapper .navbar-collapse {
-		box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
-	}
-	.sn-static-wrapper .navbar-nav .open .dropdown-menu {
-		border-radius: 0;
-		box-shadow: inset 0 16px 12px -12px rgba(0, 0, 0, .175), inset 0 -16px 12px -12px rgba(0, 0, 0, .175);
-	}
-	.sn-static-wrapper .dropdown-menu>.divider, .sn-static-wrapper .dropdown-header {
-		position: relative;
-		z-index: -1;
-	}
-	.sn-static-wrapper .navbar-nav .open .dropdown-menu>li>a {
-		padding: 0;
-	}
-	.sn-static-wrapper .navbar-nav .open .dropdown-menu>li>a>div {
-		padding: 5px 15px 5px 25px;
-		position: relative;
-		z-index: -1;
-	}
-}
-
-/* 1.2.0 Navbar fixed top styles */
-
-@media (min-width: 768px) {
-	.sn-fixed-wrapper {
-		top: 0;
-		position: fixed;
-		z-index: 1030;
-		right: 0;
-		left: 0;
-	}
-	.sn-fixed-wrapper .navbar-fixed-top {
-		right: auto;
-		left: auto;
-		top: auto;
-		position: relative;
-		box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
-		z-index: auto;
-	}
-	.sn-fixed-wrapper .dropdown-menu {
-		z-index: -1;
-	}
-}
-@media (max-width: 767px) {
-	.sn-fixed-wrapper .navbar-header {
-		position: relative;
-		z-index: 1;
-	}
-	.sn-fixed-wrapper .navbar-header, .sn-fixed-wrapper .navbar-collapse {
-		box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
-	}
-	.sn-fixed-wrapper .navbar-nav .open .dropdown-menu {
-		border-radius: 0;
-		box-shadow: inset 0 16px 12px -12px rgba(0, 0, 0, .175), inset 0 -16px 12px -12px rgba(0, 0, 0, .175);
-	}
-	.sn-fixed-wrapper .dropdown-menu>.divider, .sn-fixed-wrapper .dropdown-header {
-		position: relative;
-		z-index: -1;
-	}
-	.sn-fixed-wrapper .navbar-nav .open .dropdown-menu>li>a {
-		padding: 0;
-	}
-	.sn-fixed-wrapper .navbar-nav .open .dropdown-menu>li>a>div {
-		padding: 5px 15px 5px 25px;
-		position: relative;
-		z-index: -1;
-	}
-}
-
-/* 1.2.3 Navbar jquery/jqueryui animation styles */
-
-@media (max-width: 767px) {
-
-	.jq-anim .dropdown-menu, .jq-ui-anim .dropdown-menu {
-    z-index: auto;
+  .navbar-header {
     position: relative;
-    float: none;
-    overflow: hidden;
-	}	
-	
-  .jq-anim .dropdown-menu, .jq-ui-anim .dropdown-menu {
-		border-radius: 0;
-		box-shadow: inset 0 16px 12px -12px rgba(0, 0, 0, .175), inset 0 -16px 12px -12px rgba(0, 0, 0, .175);
+    z-index: 1;
   }
-	
-  .jq-anim .dropdown-menu, .jq-anim .navbar-nav .open .dropdown-menu, .jq-ui-anim .dropdown-menu, .jq-ui-anim .navbar-nav .open .dropdown-menu {
-    background-color: transparent;
+  .navbar-header, .navbar-collapse {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+  }
+  .dropdown {
+    z-index: 0;
+  }
+  .dropdown-menu {
     border-radius: 0;
   }
-  
-  
-  .jq-anim .dropdown-header, .jq-ui-anim .dropdown-header {
-    padding: 5px 15px 5px 25px;
+  .dropdown-menu, .navbar-nav .open .dropdown-menu {
+    box-shadow: inset 0 16px 12px -12px rgba(0, 0, 0, .175), inset 0 -16px 12px -12px rgba(0, 0, 0, .175);
   }
-  
-  
-  .jq-anim .dropdown-menu>li>a, .jq-ui-anim .dropdown-menu>li>a {
+  .divider, .dropdown-header {
+    position: relative;
+    z-index: -1;
+  }
+  .navbar-nav .open .dropdown-menu>li>a {
     padding: 0;
-    color: #777;
   }
-  
-  
-
-  .jq-anim .dropdown-menu>li>a>div, .jq-ui-anim .dropdown-menu>li>a>div {
+  .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+    background-color: transparent;
+  }
+  .dropdown-menu>li>a>div {
     padding: 5px 15px 5px 25px;
+    position: relative;
+    z-index: -1;
   }
 }
-
 @media (min-width: 768px) {
-	.jq-ui-anim .dropdown-menu {
-		clip: rect(0, auto, auto, auto);
-	}
-
-}	
-
-/* 1.2.1 Global styles */
-
-@media (min-width: 768px) {
-	/* 1.2.1 Assigned rule to shadownav */
-	/* 1.1.0 IE fix */
-	.sn-default-wrapper .dropdown-menu > li, .sn-static-wrapper .dropdown-menu > li, .sn-fixed-wrapper .dropdown-menu > li {
-		list-style-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
-	}	
-}
-@media (max-width: 767px) {
-	/* 1.2.3 Removed dropdown-menu inner border on animation */
-	.sn-default-wrapper .dropdown-menu, .sn-static-wrapper .dropdown-menu, .sn-fixed-wrapper .dropdown-menu {
-		border-width: 0;
-	}	
+  .sn-default {
+    position: relative;
+    z-index: 0;
+  }
+  .sn-static {
+    position: relative;
+    z-index: 1000;
+  }
+  .sn-static .navbar-static-top {
+    z-index: auto;
+  }
+  .sn-fixed {
+    top: 0;
+    position: fixed;
+    z-index: 1030;
+    right: 0;
+    left: 0;
+  }
+  .sn-fixed .navbar-fixed-top {
+    right: auto;
+    left: auto;
+    top: auto;
+    position: relative;
+    z-index: auto;
+  }
+  .navbar {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+  }
+  .dropdown>div {
+    position: absolute;
+    clip: rect(1px, 9999px, 9999px, -9999px);
+  }
+  .dropdown-menu {
+    z-index: -1;
+  }
+  .dropdown-menu>li {
+    list-style-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
+  }
 }

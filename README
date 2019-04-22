@@ -1,61 +1,53 @@
 Shadownav
 
 What the project is for
-	-Responsive Bootstrap 3.3.7 navbar shadow effects
-	-Works with default navbar, navbar static top and navbar fixed top styles
-	
+	Bootstrap 3 navbar and dropdown shadow effects plugin
+		-Works with default, static top and fixed navbars ( See https://getbootstrap.com/docs/3.3/getting-started/#examples-navbars )
+
 How to configure and install it
-	1. Add link to shadownav.css after bootstrap CSS files
-	2. Wrap nav element with a div containing the appropriate shadownav wrapper class
-		-.sn-default-wrapper for (default) navbar
-		-.sn-static-wrapper for static-top-navbar
-		-.sn-fixed-wrapper for static-fixed-navbar
-	3. Wrap dropdown-menu anchors' text with divs (for correct dropdown menu inset shadow optics and link functionality)
-	4. For animations
-		-Add link to jquery ui after jquery (for jquery ui slide effect)
-		-Assign jq-anim or jq-ui-anim (for jquery ui slide effect) class to shadownav wrapper assigned div
-		-Add script after bootstrap JS files
-		
+	Markup
+		Note: Include Shadownav CSS in correct order
+		1. Wrap nav element with div containing appropriate Shadownav wrapper class
+			-.sn-default for (default) navbar
+			-.sn-static for static top navbar
+			-.sn-fixed for fixed navbar
+		2. Wrap "dropdown-menu" element with div
+		3. Wrap "dropdown-menu" element's links' text with divs
+
 An example of how to use it or get it running
-	Extract files for example/examples
-	
+	https://tightcode.github.io/shadownav
+
 The license that the project is offered under
 	The MIT License
-	
-How to contribute to it
-	Join the chat at https://gitter.im/shadownav/community
-	
-Version history
+
+Contributing
+	Author: tightcode
+			Github: https://github.com/tightcode
+			Email: tightcodedev@gmail.com
+
+Version History / Release Notes
+	Note:
+		-semantically invalid version number increment @ 1.0.1-beta to 1.0.0
+		-version numbers prior to 1.2.4-alpha simply noted in commit messages
+	1.2.4-alpha
+		-major update
 	1.2.3
-		-Updated README
-		-Navbar jquery/jqueryui animation styles
-		-Removed dropdown-menu inner border on animation
+		-update readme
+		-update code
 	1.2.2
-		-Establish a stacking context for sn-default-wrapper
+		-update code
 	1.2.1
-		-Updated README
-		-Assigned (IE Fix) rule to shadownav
+		-update readme
 	1.2.0
-		-Updated README
-		-Added navbar static top and navbar fixed top styles
+		-update readme
+		-update code
 	1.1.0
-		-Updated README
-		-Change shadownav-wrapper class name to sn-default-wrapper in markup and css
-		-IE list-style fix
-		-Isolated dropdown z-index property to descendent of sn-default-wrapper only (other navbars have established navbar-contexts)
+		-update readme
+		-update code
+		-ie list-style fix
 	1.0.0
-		-Shadownav initial release
-
-Getting Started
-Extract files for example
-or
-To use plugin with default bootstrap navbar (https://getbootstrap.com/docs/3.3/examples/navbar/)
-	1. Link to shadownav.css after navbar.css in head
-	2. Wrap nav with shadownav-wrapper
-	3. Wrap anchors' text with divs
-
-Prerequisites
-Everything is included
-
-Built With
-Bootstrap
+		-update
+	1.0.1-beta
+		-update code
+	1.0.0-alpha
+		-initial release

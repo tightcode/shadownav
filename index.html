@@ -11,12 +11,12 @@
     <title>Navbar Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="navbar.css" rel="stylesheet">
 	
-    <!-- Shadownav styles -->
+    <!-- Include Shadownav CSS -->
     <link href="shadownav.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -29,49 +29,52 @@
   <body>
 
     <div class="container">
-		<!-- 1.1.0 Change shadownav-wrapper class name to sn-default-wrapper -->
-		<!-- 1.0.0 Wrap nav with shadownav-wrapper -->
-		<div class="sn-default-wrapper jq-ui-anim">
-		  <!-- Static navbar -->
-		  <nav class="navbar navbar-default">
-			<div class="container-fluid">
-			  <div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-				  <span class="sr-only">Toggle navigation</span>
-				  <span class="icon-bar"></span>
-				  <span class="icon-bar"></span>
-				  <span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#">Project name</a>
-			  </div>
-			  <div id="navbar" class="navbar-collapse collapse">
-				<ul class="nav navbar-nav">
-				  <li class="active"><a href="#">Home</a></li>
-				  <li><a href="#">About</a></li>
-				  <li><a href="#">Contact</a></li>
-				  <li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-					<ul class="dropdown-menu">
-					  <!-- 1.0.0 Wrap anchors' text with divs -->
-					  <li><a href="#"><div>Action</div></a></li>
-					  <li><a href="#"><div>Another action</div></a></li>
-					  <li><a href="#"><div>Something else here</div></a></li>
-					  <li role="separator" class="divider"></li>
-					  <li class="dropdown-header">Nav header</li>
-					  <li><a href="#"><div>Separated link</div></a></li>
-					  <li><a href="#"><div>One more separated link</div></a></li>
-					</ul>
-				  </li>
-				</ul>
-				<ul class="nav navbar-nav navbar-right">
-				  <li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li>
-				  <li><a href="../navbar-static-top/">Static top</a></li>
-				  <li><a href="../navbar-fixed-top/">Fixed top</a></li>
-				</ul>
-			  </div><!--/.nav-collapse -->
-			</div><!--/.container-fluid -->
-		  </nav>
-		</div>
+			<!-- Wrap nav element with div containing appropriate Shadownav wrapper class -->
+			<div class="sn-default">
+				<!-- Static navbar -->
+				<nav class="navbar navbar-default">
+					<div class="container-fluid">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="#">Project name</a>
+						</div>
+						<div id="navbar" class="navbar-collapse collapse">
+							<ul class="nav navbar-nav">
+								<li class="active"><a href="#">Home</a></li>
+								<li><a href="#">About</a></li>
+								<li><a href="#">Contact</a></li>
+								<!-- Add slide effect animation class to "dropdown" element -->
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+									<!-- Wrap "dropdown-menu" element with div -->
+									<div>
+										<ul class="dropdown-menu">
+											<!-- Wrap "dropdown-menu" element's links' text with divs -->
+											<li><a href="#"><div>Action</div></a></li>
+											<li><a href="#"><div>Another action</div></a></li>
+											<li><a href="#"><div>Something else here</div></a></li>
+											<li role="separator" class="divider"></li>
+											<li class="dropdown-header">Nav header</li>
+											<li><a href="#"><div>Separated link</div></a></li>
+											<li><a href="#"><div>One more separated link</div></a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+							<ul class="nav navbar-nav navbar-right">
+								<li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li>
+								<li><a href="../navbar-static-top/">Static top</a></li>
+								<li><a href="../navbar-fixed-top/">Fixed top</a></li>
+							</ul>
+						</div><!--/.nav-collapse -->
+					</div><!--/.container-fluid -->
+				</nav>
+			</div>
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
         <h1>Navbar example</h1>
@@ -88,35 +91,6 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-	<script>
-		$('.jq-anim .dropdown').on('show.bs.dropdown', function() {
-		  $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
-		});
-		$('.jq-anim .dropdown').on('hide.bs.dropdown', function() {
-		  $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
-		});	
-
-	  $('.jq-ui-anim .dropdown').on('show.bs.dropdown', function() {
-		if (window.matchMedia("(max-width: 767px)").matches) {
-		  $(this).find('.dropdown-menu').first().stop(true, true).slideDown(350);
-		} else {
-		  $(this).find('.dropdown-menu').first().stop(true, true).show("slide", {
-			direction: 'up'
-		  }, 350);
-		}
-	  });
-	  $('.jq-ui-anim .dropdown').on('hide.bs.dropdown', function() {
-		if (window.matchMedia("(max-width: 767px)").matches) {
-		  $(this).find('.dropdown-menu').first().stop(true, true).slideUp(350);
-		} else {
-		  $(this).find('.dropdown-menu').first().stop(true, true).hide("slide", {
-			direction: 'up'
-		  }, 350);
-		}
-	  });
-
-	</script>
   </body>
 </html>
